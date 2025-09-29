@@ -23,6 +23,7 @@ As well as useful links to learn more */
   --space: clamp(6px, 6px + 2vw, 15px);
   --line: 1px solid;
   --container: 1280px;
+  
 }
 /* ====== Base Elements ======
  General rules for basic HTML elements in any context */
@@ -30,6 +31,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font: var(--font);
+  text-align: center;
 }
 a {
   padding: var(--space);
