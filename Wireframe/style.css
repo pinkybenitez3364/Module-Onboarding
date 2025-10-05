@@ -30,16 +30,35 @@ body {
   background: var(--paper);
   color: var(--ink);
   font: var(--font);
+  text-align: center;
 }
+
 a {
-  padding: var(--space);
+  padding: calc(var(--space) * 1.5);
   border: var(--line);
+  border-radius: 8px;
   max-width: fit-content;
+  background-color: grey;
+  color: whitesmoke;
+  text-decoration: none;
+}
+a:hover {
+  background-color:var(--ink);
+  color: color: var(--paper);         
+  transform: scale(1.05);        
+  border-color: var(--ink);   
 }
 img,
 svg {
   width: 100%;
   object-fit: cover;
+}
+article img {
+  width: auto;            /* allows it to shrink */
+  max-width: 150px;       /* limits the size */
+  height: auto;           /* keeps aspect ratio */
+  margin: 0 auto var(--space); /* centers image with spacing below */
+  display: block; 
 }
 /* ====== Site Layout ====== 
 Setting the overall rules for page regions
@@ -49,8 +68,9 @@ main {
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
 }
+
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   text-align: center;
 }
@@ -87,3 +107,4 @@ article {
     grid-column: span 3;
   }
 }
+ 
